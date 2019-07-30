@@ -18,9 +18,9 @@ The age-band that the age belongs
 Place age into appropriate X year band
 }
 \examples{
-age_band(3)
+age_bands(3)
 # "0-9"
-age_band(3, X= 5)
+age_bands(3, X= 5)
 # "0-4"
 
 }
