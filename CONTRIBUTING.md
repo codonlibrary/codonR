@@ -23,7 +23,7 @@ While creating code we recommend that you understand the style guide standards f
 
 * [File structure](https://style.tidyverse.org/files.html) – Names, organisation, internal structure
 * [Syntax](https://style.tidyverse.org/syntax.html) – Object names, spacing, argument names, code blocks, long lines, assignment, semicolons, quotes & comments
-* [Functions]https://style.tidyverse.org/functions.html – Naming, long lines, return() & comments
+* [Functions](https://style.tidyverse.org/functions.html) – Naming, long lines, return() & comments
 * [Pipes](https://style.tidyverse.org/pipes.html) – Whitespace, long lines, short pipes, no arguments & assignment
 * [Files](https://style.tidyverse.org/package-files.html) - Names
 * [Documentation](https://style.tidyverse.org/documentation.html) – Title and description, indents and line breaks, documenting parameters, capitalization and full stops, cross-linking, R code, internal functions
