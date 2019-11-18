@@ -32,4 +32,8 @@ While creating code we recommend that you understand the style guide standards f
   
 Start reading our code to get a feel for it but most importantly, remember that this is open source software - consider the people who will read your code, and make it look nice for them.
 
+## Code of Conduct
+
+As a contributer you can help us keep the Codon community open and inclusive. Please read and follow our [Code of Conduct](https://github.com/codonlibrary/code-of-conduct/tree/master). By contributing to it, you agree to comply with it.
+
 🥂 Thank you! Team codon
