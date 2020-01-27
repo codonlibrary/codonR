@@ -28,7 +28,7 @@ nhsd_core_colours = c(
 
 #' NHS Digital chart colours
 #'
-#' A list of chart colours constructed from the NHS color palette.
+#' A list of chart colours constructed from the NHS colour palette.
 #' Contains the values "light blue", "blue", "dark blue", "warm yellow", "light grey", "grey" and "dark grey".
 #'
 #' @export
@@ -46,7 +46,7 @@ nhsd_chart_colours = c(
 nhsd_cols <- function(...) {
   cols <- c(...)
   if (is.null(cols)) {
-    return (nhsd_colors)
+    return (nhsd_chart_colours)
   }
   nhsd_chart_colours[cols]
 }
@@ -71,7 +71,7 @@ nhsd_pal <- function(palette = "main", reverse = FALSE, ...) {
 #'
 #' A ggplot compatible colour palette for producing NHS digital graphs.
 #'
-#' @param pallette Which color palette to use, can be "main", "blue", "grey" (default: "main")
+#' @param pallette Which colour palette to use, can be "main", "blue", "grey" (default: "main")
 #' @param discrete Whether this scale is discrete or continuous (default: TRUE)
 #' @param reverse Whether to reverse the scale (default: FALSE)
 #' @return A colour pallette, to be added to a ggplot plot object
@@ -83,7 +83,7 @@ nhsd_pal <- function(palette = "main", reverse = FALSE, ...) {
 #'
 #' gapminder %>%
 #'   filter(country %in% countries) %>%
-#'   ggplot(aes(year, lifeExp, color=country)) +
+#'   ggplot(aes(year, lifeExp, colour=country)) +
 #'   geom_smooth(se = FALSE) +
 #'   labs(
 #'     title = "Life expectancy",
@@ -92,7 +92,7 @@ nhsd_pal <- function(palette = "main", reverse = FALSE, ...) {
 #'     caption = "Source: gapminder (2020)"
 #'     ) +
 #'   theme_minimal() +
-#'   scale_color_nhsd("blue") +
+#'   scale_colour_nhsd("blue") +
 #'   ggsave("test.png",
 #'          type = "cairo",
 #'          width = 7,
@@ -118,7 +118,7 @@ scale_color_nhsd <- scale_colour_nhsd
 #'
 #' A ggplot compatible colour palette for producing NHS digital graphs.
 #'
-#' @param pallette Which color palette to use, can be "main", "blue", "grey" (default: "main")
+#' @param pallette Which colour palette to use, can be "main", "blue", "grey" (default: "main")
 #' @param discrete Whether this scale is discrete or continuous (default: FALSE)
 #' @param reverse Whether to reverse the scale (default: FALSE)
 #' @return A colour pallette
