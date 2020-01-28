@@ -7,11 +7,11 @@
 scale_fill_nhsd(palette = "main", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
+\item{palette}{Which colour palette to use, can be "main", "blue", "grey" (default: "main")}
+
 \item{discrete}{Whether this scale is discrete or continuous (default: FALSE)}
 
 \item{reverse}{Whether to reverse the scale (default: FALSE)}
-
-\item{pallette}{Which colour palette to use, can be "main", "blue", "grey" (default: "main")}
 }
 \value{
 A colour pallette
@@ -20,6 +20,8 @@ A colour pallette
 A ggplot compatible colour palette for producing NHS digital graphs.
 }
 \examples{
+library(ggplot2)
+
 ggplot(faithfuld, aes(waiting, eruptions)) +
     geom_raster(aes(fill = density)) +
     theme_minimal() +

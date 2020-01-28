@@ -8,11 +8,11 @@
 scale_colour_nhsd(palette = "main", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
+\item{palette}{Which colour palette to use, can be "main", "blue", "grey" (default: "main")}
+
 \item{discrete}{Whether this scale is discrete or continuous (default: TRUE)}
 
 \item{reverse}{Whether to reverse the scale (default: FALSE)}
-
-\item{pallette}{Which colour palette to use, can be "main", "blue", "grey" (default: "main")}
 }
 \value{
 A colour pallette, to be added to a ggplot plot object
@@ -21,26 +21,11 @@ A colour pallette, to be added to a ggplot plot object
 A ggplot compatible colour palette for producing NHS digital graphs.
 }
 \examples{
-library(gapminder)
+library(ggplot2)
 
-countries <- c("United Kingdom", "China", "Gambia")
-
-gapminder \%>\%
-  filter(country \%in\% countries) \%>\%
-  ggplot(aes(year, lifeExp, colour=country)) +
-  geom_smooth(se = FALSE) +
-  labs(
-    title = "Life expectancy",
-    x = "Year",
-    y = "Expectancy",
-    caption = "Source: gapminder (2020)"
-    ) +
+ggplot(iris, aes(Sepal.Length, Petal.Length, colour=Species)) +
+  geom_point() +
   theme_minimal() +
-  scale_colour_nhsd("blue") +
-  ggsave("test.png",
-         type = "cairo",
-         width = 7,
-         height = 4,
-  )
+  scale_colour_nhsd()
 
 }

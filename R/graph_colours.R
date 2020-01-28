@@ -71,33 +71,18 @@ nhsd_pal <- function(palette = "main", reverse = FALSE, ...) {
 #'
 #' A ggplot compatible colour palette for producing NHS digital graphs.
 #'
-#' @param pallette Which colour palette to use, can be "main", "blue", "grey" (default: "main")
+#' @param palette Which colour palette to use, can be "main", "blue", "grey" (default: "main")
 #' @param discrete Whether this scale is discrete or continuous (default: TRUE)
 #' @param reverse Whether to reverse the scale (default: FALSE)
 #' @return A colour pallette, to be added to a ggplot plot object
 #'
 #' @examples
-#' library(gapminder)
+#' library(ggplot2)
 #'
-#' countries <- c("United Kingdom", "China", "Gambia")
-#'
-#' gapminder %>%
-#'   filter(country %in% countries) %>%
-#'   ggplot(aes(year, lifeExp, colour=country)) +
-#'   geom_smooth(se = FALSE) +
-#'   labs(
-#'     title = "Life expectancy",
-#'     x = "Year",
-#'     y = "Expectancy",
-#'     caption = "Source: gapminder (2020)"
-#'     ) +
+#' ggplot(iris, aes(Sepal.Length, Petal.Length, colour=Species)) +
+#'   geom_point() +
 #'   theme_minimal() +
-#'   scale_colour_nhsd("blue") +
-#'   ggsave("test.png",
-#'          type = "cairo",
-#'          width = 7,
-#'          height = 4,
-#'   )
+#'   scale_colour_nhsd()
 #'
 #' @aliases scale_color_nhsd
 #' @export
@@ -118,12 +103,14 @@ scale_color_nhsd <- scale_colour_nhsd
 #'
 #' A ggplot compatible colour palette for producing NHS digital graphs.
 #'
-#' @param pallette Which colour palette to use, can be "main", "blue", "grey" (default: "main")
+#' @param palette Which colour palette to use, can be "main", "blue", "grey" (default: "main")
 #' @param discrete Whether this scale is discrete or continuous (default: FALSE)
 #' @param reverse Whether to reverse the scale (default: FALSE)
 #' @return A colour pallette
 #'
 #' @examples
+#' library(ggplot2)
+#'
 #' ggplot(faithfuld, aes(waiting, eruptions)) +
 #'     geom_raster(aes(fill = density)) +
 #'     theme_minimal() +
