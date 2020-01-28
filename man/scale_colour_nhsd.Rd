@@ -22,7 +22,6 @@ A ggplot compatible colour palette for producing NHS digital graphs.
 }
 \examples{
 library(ggplot2)
-
 ggplot(iris, aes(Sepal.Length, Petal.Length, colour=Species)) +
   geom_point() +
   theme_minimal() +

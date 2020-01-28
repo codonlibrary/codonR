@@ -76,9 +76,9 @@ nhsd_pal <- function(palette = "main", reverse = FALSE, ...) {
 #' @param reverse Whether to reverse the scale (default: FALSE)
 #' @return A colour pallette, to be added to a ggplot plot object
 #'
+#' @import ggplot2
 #' @examples
 #' library(ggplot2)
-#'
 #' ggplot(iris, aes(Sepal.Length, Petal.Length, colour=Species)) +
 #'   geom_point() +
 #'   theme_minimal() +
@@ -108,9 +108,9 @@ scale_color_nhsd <- scale_colour_nhsd
 #' @param reverse Whether to reverse the scale (default: FALSE)
 #' @return A colour pallette
 #'
+#' @import ggplot2
 #' @examples
 #' library(ggplot2)
-#'
 #' ggplot(faithfuld, aes(waiting, eruptions)) +
 #'     geom_raster(aes(fill = density)) +
 #'     theme_minimal() +

@@ -18,6 +18,7 @@ Description: Provides implementation of various methods of data analysis that wo
 License: BSD_3_clause + file LICENSE
 LazyData: false
 Imports:
+    ggplot2,
     MASS
 Suggests:
     testthat

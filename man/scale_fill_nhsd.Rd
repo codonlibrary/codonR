@@ -21,7 +21,6 @@ A ggplot compatible colour palette for producing NHS digital graphs.
 }
 \examples{
 library(ggplot2)
-
 ggplot(faithfuld, aes(waiting, eruptions)) +
     geom_raster(aes(fill = density)) +
     theme_minimal() +
